@@ -2,7 +2,13 @@
     --content-width: calc(1500px + 2rem);
     --off-white: #d9d7d7;
     --lighter-blue: #292c3a;
+    --lightest-blue: #3d4154;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 a{
     color: var(--off-white);
     line-height: 1em;
@@ -59,6 +65,7 @@ body {
 
 #introTitle{
     font-size: 60px;
+    font-weight: bold;
 }
 
 #introDescription{
@@ -216,4 +223,24 @@ h1{
 
 .fullPadding{
     padding: 2em;
+}
+
+.linkButton {
+    background-color: var(--lighter-blue);
+    padding: .5em 1em;
+    border-radius: 20px;
+    transition: .25s;
+}
+
+.linkButton:hover {
+    background-color: var(--lightest-blue);
+    transition: .15s;
+}
+
+.linkButtonBox {
+    font-size: 22px;
+    display: flex;
+    flex-direction: row;
+    padding-top: 1em;
+    gap: 1em;
 }
