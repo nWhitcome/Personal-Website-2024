@@ -118,6 +118,7 @@ body {
     max-width: var(--content-width);
     width: 100%;
     padding: 2em;
+    gap: 1em;
 }
 
 #topBar{
@@ -274,4 +275,10 @@ h2 {
     height: 22px;
     overflow:clip;
     white-space: nowrap;
+}
+
+.progProject{
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
 }
