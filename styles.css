@@ -1,7 +1,7 @@
 :root {
     --content-width: calc(1500px + 2rem);
     --off-white: #d9d7d7;
-    --lighter-blue: #292c3a;
+    --lighter-blue: #262936;
     --lightest-blue: #535975;
     --dark-blue: #1d1f29;
 }
@@ -16,8 +16,28 @@ a{
     text-decoration: none;
 }
 
+p {
+    margin: 0;
+}
+
+html {
+    --s: 150px; /* control the size*/
+    --c1: var(--lighter-blue);
+    --c2: var(--dark-blue);
+      
+    --c:#0000 75%,var(--c1) 0;
+    --g1:conic-gradient(at calc(200%/3) 10%,var(--c));
+    --g2:conic-gradient(at 10% calc(200%/3),var(--c));
+    background:
+      var(--g1), var(--g2),
+      var(--g1) var(--s) var(--s),
+      var(--g2) var(--s) var(--s),
+      var(--g1) calc(2*var(--s)) calc(2*var(--s)),
+      var(--g2) calc(2*var(--s)) calc(2*var(--s)) var(--c2);
+    background-size: calc(3*var(--s)) calc(3*var(--s));
+  }
+
 body {
-    background-color: #1d1f29;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -179,6 +199,9 @@ body {
 
 .cardTextInfo{
     font-size: 20px;
+    display:flex;
+    flex-direction: column;
+    gap:1em;
 }
 
 h2 {
@@ -281,4 +304,8 @@ h2 {
     display: flex;
     gap: 1em;
     flex-direction: column;
+}
+
+.subHeading {
+    font-size: 20px;
 }
