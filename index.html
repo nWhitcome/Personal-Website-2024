@@ -15,10 +15,9 @@
         <div id="mainBody">
             <div id="topBar">
                 <div id="tb2">
-                    <div class="topBarItem">Nathan Whitcome</div>
-                    <a href="#contactSection"><div class="topBarItem">Contact Me</div></a>
+                    <div class="barItem">Nathan Whitcome</div>
+                    <a href="#contactSection"><div class="barItem">Contact Me</div></a>
                 </div>
-            </div>
             </div>
             <div id="topBox"> 
                 <div id="introDiv">
@@ -29,235 +28,236 @@
                     <img id="headshotMain" src="src/Headshot.jpg" alt="It is I, Nathan Whitcome">
                 </div>
             </div>
-        </div>
-        <div id="resumeDiv">
-            <div id="textBody">
-                <div class="bodySection">
-                    <h1>Programming Projects</h1>
-                    <div class="progProject">
+            <div id="resumeDiv">
+                <div id="textBody">
+                    <div class="bodySection">
+                        <h1>Programming Projects</h1>
+                        <div class="progProject">
+                            <div class="projectCard">
+                                <img class="cardPhoto" src="src/ProjectPhotos/AbletonMidiPhoto.jpg">
+                                <div class="cardText">
+                                    <div class="cardTitleBox">
+                                        <h2>Ableton Midi Controller</h2>
+                                        <div class="toolItem">Python</div>
+                                        <div class="toolItem">C</div>
+                                        <div class="toolItem">Embedded Systems</div>
+                                    </div>
+                                    <div class="cardTextInfo">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis pharetra nisi, a volutpat lectus. In egestas ullamcorper feugiat. Curabitur lacinia rhoncus arcu, ut aliquet augue blandit vel.
+                                    </div>
+                                    <div class="linkButtonBox">
+                                        <a href="https://github.com/nWhitcome/Ableton-MIDI-DAW-Controller">
+                                            <div class="linkButton">Github</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projectCard">
+                                <img class="cardPhoto" src="src/ProjectPhotos/StickingPatternGenerator.png">
+                                <div class="cardText">
+                                    <div class="cardTitleBox">
+                                        <h2>Sticking Pattern Generator</h2>
+                                        <div class="toolItem">HTML</div>
+                                        <div class="toolItem">CSS</div>
+                                        <div class="toolItem">Vue.js</div>
+                                    </div>
+                                    <div class="cardTextInfo">
+                                        <p>
+                                            <b>The Problem:</b><br>
+                                            I picked up drum sticks for the first time in late 2019 and began teaching myself to play in hopes of accompanying my guitar recordings. I discovered that there are “rudiments”, which are patterns played by switching which limb you are using to hit the drum kit. For example: a common one is a paradiddle, which goes right, left, right, right.
+                                        </p>
+                                        <p>
+                                            I spent hours looking at YouTube videos and finding different patterns that other drummers use regularly but it was difficult to find unique ones to practice.
+                                        </p>
+                                        <p>
+                                            <b>My Solution:</b><br>
+                                            I had the idea of creating a web app that allowed users to generate random sticking patterns that alternated between left, right, and kick. I allowed the patterns to be up to fifteen segments long and added in a metronome to aid in practicing timing.
+                                        </p>
+                                        <p>
+                                            The project is an exercise in creating simple, clean, responsive user interfaces and I learned a lot in the process of making it.
+                                        </p>
+                                    </div>
+                                    <div class="linkButtonBox">
+                                        <a href="https://github.com/nWhitcome/Drum-Sticking-Pattern-Generator">
+                                            <div class="linkButton">Github</div>
+                                        </a>
+                                        <a href="https://sticking-pattern.netlify.app/">
+                                            <div class="linkButton">Website</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="projectCard">
+                                <img class="cardPhoto" src="src/ProjectPhotos/MusicBot.png">
+                                <div class="cardText">
+                                    <div class="cardTitleBox">
+                                        <h2>Discord Music Club Bot</h2>
+                                        <div class="toolItem">Python</div>
+                                    </div>
+                                    <div class="cardTextInfo">
+                                        <p>
+                                            <b>The Problem:</b><br>
+                                            In 2021 / 2022 I started what was essentially a book club but for music with a bunch of my friends on a Discord server that I run. The idea was that we could all make suggestions for an album that we wanted to listen to each week, vote on one winner, and listen to it together while sharing our first impressions.
+                                        </p>
+                                        <p>
+                                            Eventually we had enough people that it was becoming difficult to manage who listed what suggestion and to handle the process of voting.
+                                        </p>
+                                        <p>
+                                            <b>My Solution:</b><br>
+                                            I figured I could make a bot for Discord that automated the entire process for me by keeping track of each user’s most recent suggestion and putting up a poll with all of them 24 hours before the meeting.
+                                        </p>
+                                        <p>
+                                            It worked quite well! We decided at some point that the last week of every month should be changed to have everyone add one song to a playlist that we all listened to together rather than voting on an album and I updated the bot to handle that scenario and it served us well until we stopped doing the music club sometime in 2022.
+                                        </p>
+
+                                    </div>
+                                    <div class="linkButtonBox">
+                                        <a href="https://github.com/nWhitcome/Discord-Music-Bot">
+                                            <div class="linkButton">Github</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bodySection">
+                        <h1>Professional Experience</h1>
                         <div class="projectCard">
-                            <img class="cardPhoto" src="src/ProjectPhotos/AbletonMidiPhoto.jpg">
                             <div class="cardText">
                                 <div class="cardTitleBox">
-                                    <h2>Ableton Midi Controller</h2>
+                                    <h2>Motorola Solutions <p class="subHeading">Jan 2022 - Dec 2024</p></h2>
+                                    <div class="toolItem">Python</div>
+                                    <div class="toolItem">Java</div>
+                                    <div class="toolItem">Bash</div>
+                                    <div class="toolItem">Git</div>
+                                    <div class="toolItem">Docker / Podman</div>
+                                    <div class="toolItem">Kubernetes</div>
+                                    <div class="toolItem">Agile</div>
+                                    <div class="toolItem">Spring</div>
+                                    <div class="toolItem">Azure</div>
+                                </div>
+                                <div class="cardTextInfo">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis pharetra nisi, a volutpat lectus. In egestas ullamcorper feugiat. Curabitur lacinia rhoncus arcu, ut aliquet augue blandit vel.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projectCard">
+                            <div class="cardText">
+                                <div class="cardTitleBox">
+                                    <h2>Iowa State University<p class="subHeading">2020 - 2021</p></h2>
+                                    <div class="toolItem">Embedded Programming</div>
+                                    <div class="toolItem">Advanced Wireless Protocols</div>
+                                </div>
+                                <div class="cardTextInfo">
+                                    <p>
+                                        I worked three different positions during my time at Iowa State University while pursuing my master's degree:
+                                    </p>
+                                    <p>
+                                        <b>Graduate Research Assistant for the ARA Project</b><br>
+                                        In 2020, while I was working on my master's, I was brought on to the ARA Project by the director, Hongwei Zhang, to do preliminary work looking into software defined networking. I participated in a research group that met weekly to discuss academic papers related to advanced wireless networking. A couple of months into my work, we received a $19 million grant from the National Science Foundation to continue the project, which involved creating the world's first advanced wireless testbed for agricultural purposes.
+                                    </p>
+                                    <p>
+                                        <b>Teaching Assistant for Advanced Wireless Networking</b><br>
+                                        Professor Zhang was impressed with my work with the ARA Project, so he asked me to assist him with his Introduction to Advanced Wireless Networking class. I guided students through the curriculum during my office hours and graded homework assignments.
+                                    </p>
+                                    <p>
+                                        <b>Teaching Assistant for Embedded Systems Programming</b><br>
+                                        Intro to Advanced Wireless Networking was only offered once a year, so during the last semester of my master's, I was a TA for an intermediate class where I led multiple two hour lab sessions every week alongside my office hours. I gave a basic overview of the concepts needed for the lab at the beginning of each session and checked code functionality and quality when students demoed their working projects.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projectCard">
+                            <div class="cardText">
+                                <div class="cardTitleBox">
+                                    <h2>Power Electronics International<p class="subHeading">Summer 2018 - 2020</p></h2>
                                     <div class="toolItem">Python</div>
                                     <div class="toolItem">C</div>
-                                    <div class="toolItem">Embedded Systems</div>
                                 </div>
                                 <div class="cardTextInfo">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis pharetra nisi, a volutpat lectus. In egestas ullamcorper feugiat. Curabitur lacinia rhoncus arcu, ut aliquet augue blandit vel.
                                 </div>
-                                <div class="linkButtonBox">
-                                    <a href="https://github.com/nWhitcome/Ableton-MIDI-DAW-Controller">
-                                        <div class="linkButton">Github</div>
-                                    </a>
-                                </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="bodySection">
+                        <h1>Educational Experience</h1>
                         <div class="projectCard">
-                            <img class="cardPhoto" src="src/ProjectPhotos/StickingPatternGenerator.png">
                             <div class="cardText">
-                                <div class="cardTitleBox">
-                                    <h2>Sticking Pattern Generator</h2>
-                                    <div class="toolItem">HTML</div>
-                                    <div class="toolItem">CSS</div>
-                                    <div class="toolItem">Vue.js</div>
-                                </div>
+                                <h2>Iowa State University<p class="subHeading">2016 - 2021</p></h2>
                                 <div class="cardTextInfo">
                                     <p>
-                                        <b>The Problem:</b><br>
-                                        I picked up drum sticks for the first time in late 2019 and began teaching myself to play in hopes of accompanying my guitar recordings. I discovered that there are “rudiments”, which are patterns played by switching which limb you are using to hit the drum kit. For example: a common one is a paradiddle, which goes right, left, right, right.
+                                        <b>Bechelor's in Computer Engineering</b>
                                     </p>
                                     <p>
-                                        I spent hours looking at YouTube videos and finding different patterns that other drummers use regularly but it was difficult to find unique ones to practice.
+                                        <b>Master's in Computer Engineering</b>
                                     </p>
-                                    <p>
-                                        <b>My Solution:</b><br>
-                                        I had the idea of creating a web app that allowed users to generate random sticking patterns that alternated between left, right, and kick. I allowed the patterns to be up to fifteen segments long and added in a metronome to aid in practicing timing.
-                                    </p>
-                                    <p>
-                                        The project is an exercise in creating simple, clean, responsive user interfaces and I learned a lot in the process of making it.
-                                    </p>
-                                </div>
-                                <div class="linkButtonBox">
-                                    <a href="https://github.com/nWhitcome/Drum-Sticking-Pattern-Generator">
-                                        <div class="linkButton">Github</div>
-                                    </a>
-                                    <a href="https://sticking-pattern.netlify.app/">
-                                        <div class="linkButton">Website</div>
-                                    </a>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="bodySection">
+                        <h1>Music</h1>
                         <div class="projectCard">
-                            <img class="cardPhoto" src="src/ProjectPhotos/MusicBot.png">
+                            <img class="cardPhoto" src="src/ProjectPhotos/StalledPhoto.jpg">
                             <div class="cardText">
-                                <div class="cardTitleBox">
-                                    <h2>Discord Music Club Bot</h2>
-                                    <div class="toolItem">Python</div>
-                                </div>
+                                <h2>Stalled</h2>
                                 <div class="cardTextInfo">
                                     <p>
-                                        <b>The Problem:</b><br>
-                                        In 2021 / 2022 I started what was essentially a book club but for music with a bunch of my friends on a Discord server that I run. The idea was that we could all make suggestions for an album that we wanted to listen to each week, vote on one winner, and listen to it together while sharing our first impressions.
+                                        "I think I can safely say that Stalled are just about my favorite live band in Chicago right now. Their music has everything I love to hear in a live music context- slow, moody passages, effect-drenched guitars, intricate rhythms, and unbelievably powerful sonic explosions when you least expect them. Their music is patient, visceral, emotional, and powerful. These are three of the coolest cats in Chicago making some of the sickest music I have ever heard. The last 3 shows I have seen them play recently - at Hideout, Cole's, and last night at Schubas are burned into my memory. They are constantly pushing boundaries and writing/playing new songs, a testament to their commitment to this music. There are things this band can do that no one else can.” - Shravan Raghuram
                                     </p>
                                     <p>
-                                        Eventually we had enough people that it was becoming difficult to manage who listed what suggestion and to handle the process of voting.
+                                        Since 2022 I’ve had the pleasure of playing drums in the post-hardcore band Stalled. We recently released our debut album Dust Inside a Dream, which was recorded by the three of us in our practice studio with myself taking the lead on the production, engineering, and mixing of the record. Check us out at the links below!
                                     </p>
-                                    <p>
-                                        <b>My Solution:</b><br>
-                                        I figured I could make a bot for Discord that automated the entire process for me by keeping track of each user’s most recent suggestion and putting up a poll with all of them 24 hours before the meeting.
-                                    </p>
-                                    <p>
-                                        It worked quite well! We decided at some point that the last week of every month should be changed to have everyone add one song to a playlist that we all listened to together rather than voting on an album and I updated the bot to handle that scenario and it served us well until we stopped doing the music club sometime in 2022.
-                                    </p>
-
                                 </div>
                                 <div class="linkButtonBox">
-                                    <a href="https://github.com/nWhitcome/Discord-Music-Bot">
-                                        <div class="linkButton">Github</div>
+                                    <a href="https://www.instagram.com/stalledband/">
+                                        <div class="linkButton">Instagram</div>
+                                    </a>
+                                    <a href="https://open.spotify.com/artist/7INMT690LmwS6H12syogmY?si=TMIwet0RQXCcd_VrTdr43w">
+                                        <div class="linkButton">Spotify</div>
+                                    </a>
+                                    <a href="https://music.apple.com/us/artist/stalled/1535357518">
+                                        <div class="linkButton">Apple Music</div>
+                                    </a>
+                                    <a href="https://stalled.bandcamp.com/">
+                                        <div class="linkButton">Bandcamp</div>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="bodySection">
-                    <h1>Professional Experience</h1>
-                    <div class="projectCard">
-                        <div class="cardText">
-                            <div class="cardTitleBox">
-                                <h2>Motorola Solutions <p class="subHeading">Jan 2022 - Dec 2024</p></h2>
-                                <div class="toolItem">Python</div>
-                                <div class="toolItem">Java</div>
-                                <div class="toolItem">Bash</div>
-                                <div class="toolItem">Git</div>
-                                <div class="toolItem">Docker / Podman</div>
-                                <div class="toolItem">Kubernetes</div>
-                                <div class="toolItem">Agile</div>
-                                <div class="toolItem">Spring</div>
-                                <div class="toolItem">Azure</div>
-                            </div>
-                            <div class="cardTextInfo">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis pharetra nisi, a volutpat lectus. In egestas ullamcorper feugiat. Curabitur lacinia rhoncus arcu, ut aliquet augue blandit vel.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="projectCard">
-                        <div class="cardText">
-                            <div class="cardTitleBox">
-                                <h2>Iowa State University<p class="subHeading">2020 - 2021</p></h2>
-                                <div class="toolItem">Embedded Programming</div>
-                                <div class="toolItem">Advanced Wireless Protocols</div>
-                            </div>
-                            <div class="cardTextInfo">
-                                <p>
-                                    I worked three different positions during my time at Iowa State University while pursuing my master's degree:
-                                </p>
-                                <p>
-                                    <b>Graduate Research Assistant for the ARA Project</b><br>
-                                </p>
-                                <p>
-                                    <b>Teaching Assistant for Advanced Wireless Networking</b><br>
-                                </p>
-                                <p>
-                                    <b>Teaching Assistant for Embedded Systems Programming</b><br>
-                                </p>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="projectCard">
-                        <div class="cardText">
-                            <div class="cardTitleBox">
-                                <h2>Power Electronics International<p class="subHeading">Summer 2018 - 2020</p></h2>
-                                <div class="toolItem">Python</div>
-                                <div class="toolItem">C</div>
-                            </div>
-                            <div class="cardTextInfo">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum quis pharetra nisi, a volutpat lectus. In egestas ullamcorper feugiat. Curabitur lacinia rhoncus arcu, ut aliquet augue blandit vel.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bodySection">
-                    <h1>Educational Experience</h1>
-                    <div class="projectCard">
-                        <div class="cardText">
-                            <h2>Iowa State University<p class="subHeading">2016 - 2021</p></h2>
-                            <div class="cardTextInfo">
-                                <p>
-                                    <b>Bechelor's in Computer Engineering</b>
-                                </p>
-                                <p>
-                                    <b>Master's in Computer Engineering</b>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bodySection">
-                    <h1>Music</h1>
-                    <div class="projectCard">
-                        <img class="cardPhoto" src="src/ProjectPhotos/StalledPhoto.jpg">
-                        <div class="cardText">
-                            <h2>Stalled</h2>
-                            <div class="cardTextInfo">
-                                <p>
-                                    "I think I can safely say that Stalled are just about my favorite live band in Chicago right now. Their music has everything I love to hear in a live music context- slow, moody passages, effect-drenched guitars, intricate rhythms, and unbelievably powerful sonic explosions when you least expect them. Their music is patient, visceral, emotional, and powerful. These are three of the coolest cats in Chicago making some of the sickest music I have ever heard. The last 3 shows I have seen them play recently - at Hideout, Cole's, and last night at Schubas are burned into my memory. They are constantly pushing boundaries and writing/playing new songs, a testament to their commitment to this music. There are things this band can do that no one else can.” - Shravan Raghuram
-                                </p>
-                                <p>
-                                    Since 2022 I’ve had the pleasure of playing drums in the post-hardcore band Stalled. We recently released our debut album Dust Inside a Dream, which was recorded by the three of us in our practice studio with myself taking the lead on the production, engineering, and mixing of the record. Check us out at the links below!
-                                </p>
-                            </div>
-                            <div class="linkButtonBox">
-                                <a href="https://www.instagram.com/stalledband/">
-                                    <div class="linkButton">Instagram</div>
-                                </a>
-                                <a href="https://open.spotify.com/artist/7INMT690LmwS6H12syogmY?si=TMIwet0RQXCcd_VrTdr43w">
-                                    <div class="linkButton">Spotify</div>
-                                </a>
-                                <a href="https://music.apple.com/us/artist/stalled/1535357518">
-                                    <div class="linkButton">Apple Music</div>
-                                </a>
-                                <a href="https://stalled.bandcamp.com/">
-                                    <div class="linkButton">Bandcamp</div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="bodySection" id="contactSection">
-                    <h1>Want to know more?</h1>
-                    <div class="projectCard">
-                        <div class="cardText fullPadding">
-                            <div class="cardTextInfo">
-                                Download my full resume or contact me at any of the links below!
-                                
-                            </div>
-                            <div style="padding-top:1em;">
-                                <a href="src/Nathan-Whitcome-Resume-2024v2.pdf" download>
-                                    <div class="contact-selection">
-                                        <img class="contact-icon" style="width: auto; height: 30px;" src="src/Icons/resumeIcon.png">Resume
-                                    </div>
-                                </a>
-                                <a href='mailto&#58;nat&#104;a&#110;&#37;&#50;E&#119;hi&#116;c&#111;me&#37;2E&#98;u%73i%6Ee&#115;&#115;&#37;4&#48;gm%61il%&#50;Eco&#109;'>
-                                    <div class="contact-selection">
-                                        <i class="fa fa-envelope contact-icon" style="font-size:30px"></i>Email (nathan&#46;whitc&#111;me&#46;busin&#101;s&#115;&#64;gm&#97;i&#108;&#46;com)
-                                    </div>
-                                </a>
-                                <a href="https://www.linkedin.com/in/nathan-whitcome/">
-                                    <div class="contact-selection">
-                                        <img class="contact-icon" style="width: auto; height: 30px; padding-right: 10px;" src="src/Icons/LI-In-Bug.png">LinkedIn
-                                    </div>
-                                </a>
-                                <a href="https://www.instagram.com/whitcomenathan/">
-                                    <div class="contact-selection">
-                                        <img class="contact-icon" style="width: auto; height: 30px;" src="src/Icons/instagram.png">Instagram
-                                    </div>
-                                </a>
+                    <div class="bodySection" id="contactSection">
+                        <h1>Want to know more?</h1>
+                        <div class="projectCard">
+                            <div class="cardText fullPadding">
+                                <div class="cardTextInfo">
+                                    Download my full resume or contact me at any of the links below!
+                                </div>
+                                <div style="padding-top:1em;">
+                                    <a href="src/Nathan-Whitcome-Resume-2024v2.pdf" download>
+                                        <div class="contact-selection">
+                                            <img class="contact-icon" style="width: auto; height: 30px;" src="src/Icons/resumeIcon.png">Resume
+                                        </div>
+                                    </a>
+                                    <a href='mailto&#58;nat&#104;a&#110;&#37;&#50;E&#119;hi&#116;c&#111;me&#37;2E&#98;u%73i%6Ee&#115;&#115;&#37;4&#48;gm%61il%&#50;Eco&#109;'>
+                                        <div class="contact-selection">
+                                            <i class="fa fa-envelope contact-icon" style="font-size:30px"></i>Email (nathan&#46;whitc&#111;me&#46;busin&#101;s&#115;&#64;gm&#97;i&#108;&#46;com)
+                                        </div>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/nathan-whitcome/">
+                                        <div class="contact-selection">
+                                            <img class="contact-icon" style="width: auto; height: 30px; padding-right: 10px;" src="src/Icons/LI-In-Bug.png">LinkedIn
+                                        </div>
+                                    </a>
+                                    <a href="https://www.instagram.com/whitcomenathan/">
+                                        <div class="contact-selection">
+                                            <img class="contact-icon" style="width: auto; height: 30px;" src="src/Icons/instagram.png">Instagram
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -266,10 +266,10 @@
         </div>
         <div id="pageFooter">
             <div id="footerCenter">
-                <div>
+                <div style="padding: 0 2em;">
                     © Nathan Whitcome 2024
                 </div>
-                <div id="footerIconHolder">
+                <div id="footerIconHolder" style="padding: 0 2em;">
                     <a href="https://github.com/nWhitcome"><img class="bottomRightIcons" src="src/Icons/github-mark-white.png"></a>
                 </div>
             </div>

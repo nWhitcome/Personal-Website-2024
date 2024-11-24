@@ -137,7 +137,6 @@ body {
     justify-content: center;
     max-width: var(--content-width);
     width: 100%;
-    padding: 2em;
     gap: 1em;
 }
 
@@ -148,7 +147,7 @@ body {
     justify-content: center;
 }
 
-.topBarItem{
+.barItem{
     padding: 2em 2em;
 }
 
