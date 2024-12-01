@@ -1,7 +1,7 @@
 :root {
     --content-width: calc(1500px + 2rem);
     --off-white: #d9d7d7;
-    --lighter-blue: #292c3a;
+    --lighter-blue: #262936;
     --lightest-blue: #535975;
     --dark-blue: #1d1f29;
 }
@@ -16,11 +16,28 @@ a{
     text-decoration: none;
 }
 
+p {
+    margin: 0;
+}
+
+html {
+    --s: 150px; /* control the size*/
+    --c1: var(--lighter-blue);
+    --c2: var(--dark-blue);
+      
+    --c:#0000 75%,var(--c1) 0;
+    --g1:conic-gradient(at calc(200%/3) 10%,var(--c));
+    --g2:conic-gradient(at 10% calc(200%/3),var(--c));
+    background:
+      var(--g1), var(--g2),
+      var(--g1) var(--s) var(--s),
+      var(--g2) var(--s) var(--s),
+      var(--g1) calc(2*var(--s)) calc(2*var(--s)),
+      var(--g2) calc(2*var(--s)) calc(2*var(--s)) var(--c2);
+    background-size: calc(3*var(--s)) calc(3*var(--s));
+  }
+
 body {
-    background-color: #1d1f29;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     font-family: "Barlow Condensed", Tahoma;
     color: var(--off-white);
     margin: 0;
@@ -55,16 +72,10 @@ body {
     margin: 2rem;
 }
 
-#mainBody {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-}
-
 #introTextBox{
     align-content: center;
     padding: 10px 30px;
+    max-width: 700px;
 }
 
 #introDiv{
@@ -72,11 +83,12 @@ body {
     justify-content: center;
     align-content: center;
     align-items: center;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
     max-width: calc(1200px + 2rem);
     padding: 1rem;
     filter: drop-shadow(8px 8px rgba(255, 255, 255, .05));
     transition: .5s;
-    max-height: 400px;
 }
 
 #introDiv:hover{
@@ -117,7 +129,6 @@ body {
     justify-content: center;
     max-width: var(--content-width);
     width: 100%;
-    padding: 2em;
     gap: 1em;
 }
 
@@ -128,7 +139,7 @@ body {
     justify-content: center;
 }
 
-.topBarItem{
+.barItem{
     padding: 2em 2em;
 }
 
@@ -179,12 +190,15 @@ body {
 
 .cardTextInfo{
     font-size: 20px;
+    display:flex;
+    flex-direction: column;
+    gap:1em;
 }
 
 h2 {
     font-size: 26px;
     margin: 1em 0;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 
@@ -254,6 +268,7 @@ h2 {
     font-size: 22px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     padding-top: 1em;
     gap: 1em;
 }
@@ -281,4 +296,8 @@ h2 {
     display: flex;
     gap: 1em;
     flex-direction: column;
+}
+
+.subHeading {
+    font-size: 20px;
 }
