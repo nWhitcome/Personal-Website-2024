@@ -8,12 +8,14 @@
         </title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div id="mainBody">
-            <div id="topBar">
+            <div id="topBar" class="animate pop">
                 <div id="tb2">
                     <div class="barItem">Nathan Whitcome</div>
                     <a href="#contactSection"><div class="barItem">Contact Me</div></a>
@@ -22,10 +24,23 @@
             <div id="topBox"> 
                 <div id="introDiv">
                     <div id="introTextBox">
-                        <div id="introTitle">Hello, my name is Nathan</div>
-                        <div id="introDescription">I'm a software development engineer, musician, and mixing engineer based out of Chicago, Illinois. I've worked on a range of software development projects across different disciplines including web development, embedded systems programming, and advanced wireless communication systems. </div>
+                        <div class="animate pop" id="introTitle">Hi, my name is Nathan. I am a
+                            <div class="animate pop" id="flip">
+                                <div><div>Senior Software Engineer</div></div>
+                                <div><div>Mixing Engineer</div></div>
+                                <div><div>Musician</div></div>
+                                <div><div>Senior Software Engineer</div></div>
+                            </div>
+                        </div>
+                        <div class="locationTitle animate pop">
+                            <div class="pin">
+                                <div></div>
+                            </div>
+                            <div class="locationText">Chicago, IL</div>
+                        </div>
+                        <div class="animate pop" id="introDescription">I've worked on a range of software development projects across different disciplines including web development, embedded systems programming, and advanced wireless communication systems. </div>
                     </div>
-                    <img id="headshotMain" src="src/Headshot.jpg" alt="It is I, Nathan Whitcome">
+                    <img class="animate pop" id="headshotMain" src="src/Headshot.jpg" alt="It is I, Nathan Whitcome">
                 </div>
             </div>
             <div id="resumeDiv">

@@ -41,7 +41,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    font-family: "Barlow Condensed", Tahoma;
+    font-family: "Lato", Tahoma;
     color: var(--off-white);
     margin: 0;
 }
@@ -82,6 +82,16 @@ body {
 
 }
 
+#introTextBox > div{
+    filter: drop-shadow(8px 8px rgba(255, 255, 255, .05));
+    transition: .5s;
+}
+
+#introTextBox > div:hover{
+    filter: drop-shadow(10px 10px rgba(255, 255, 255, .1));
+    transition: .5s;
+}
+
 #introTextBox{
     align-content: center;
     padding: 10px 30px;
@@ -94,25 +104,20 @@ body {
     align-items: center;
     max-width: calc(1200px + 2rem);
     padding: 1rem;
-    filter: drop-shadow(8px 8px rgba(255, 255, 255, .05));
-    transition: .5s;
+    
     max-height: 400px;
-}
-
-#introDiv:hover{
-    filter: drop-shadow(10px 10px rgba(255, 255, 255, .1));
-    transition: .5s;
 }
 
 #introTitle{
     font-size: 60px;
     font-weight: bold;
+    animation-delay: .75s;
 }
 
 #introDescription{
-    font-size: 18px;
-    padding: 1rem 0;
+    font-size: 20px;
     line-height: 2rem;
+    animation-delay: 1.5s;
 }
 
 #resumeDiv{
@@ -145,6 +150,7 @@ body {
     height: 5rem;
     display: flex;
     justify-content: center;
+    animation-delay: 2s;
 }
 
 .barItem{
@@ -289,7 +295,7 @@ h2 {
     overflow-x: auto;
 }
 
-.toolItem{
+.toolItem{4
     border-radius: 22px;
     line-height: 1em;
     background-color: var(--lightest-blue);
@@ -307,4 +313,98 @@ h2 {
 
 .subHeading {
     font-size: 20px;
+}
+
+.animate {
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-name: animate-fade;
+    animation-timing-function: cubic-bezier(.53,.26,.29,1.31);
+    animation-fill-mode: backwards;
+}
+
+/* Pop In */
+.animate.pop {
+    animation-name: animate-pop;
+  }
+  @keyframes animate-pop {
+    0% {
+      opacity: 0;
+      transform: scale(0.95, 0.95);
+      transform: translate(0,20px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1, 1);
+      transform: translate(0,0);
+    }
+  }
+
+  #flip {
+    margin: 4px 0;
+    height:80px;
+    overflow:hidden;
+    animation-delay: 1s;
+  }
+  
+  #flip > div > div {
+    height: 80px;
+    margin: 0;
+    display:inline-block;
+  }
+  
+  #flip div:first-child {
+    animation: show 12s ease-out infinite;
+    animation-delay: 5s;
+  }
+
+  
+  @keyframes show {
+    0% {margin-top:-240px;}
+    10% {margin-top:-160px;}
+    25% {margin-top:-160px;}
+    35% {margin-top:-80px;}
+    50% {margin-top:-80px;}
+    60% {margin-top:0px;}
+    99.99% {margin-top:0px;}
+    100% {margin-top:-240px;}
+  }
+
+.pin{
+    padding: 14px 0 0 0;
+    height: 30px;
+}
+
+.pin > div {
+    width: 4px;
+    height: 4px;
+    border: 5px solid var(--off-white);
+    border-radius: 50%;
+    position:relative;
+}
+
+.pin > div::after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    bottom: -14.8px;
+    left: -4px;
+    border: 6px solid transparent;
+    border-top: 10px solid var(--off-white);
+    position:relative;
+}
+
+.locationTitle{
+    display: flex;
+    align-items: center;
+    animation-delay: 1.25s;
+    flex-direction: row;
+    margin: 4px 0 8px;
+    height: 40px;
+}
+
+.locationText{
+    padding: 0 0 0 10px;
+    font-size: 24px;
+    height: 30px;
 }
