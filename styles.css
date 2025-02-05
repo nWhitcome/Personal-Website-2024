@@ -1,9 +1,13 @@
 :root {
     --content-width: calc(1500px + 2rem);
     --off-white: #d9d7d7;
-    --lighter-blue: #262936;
-    --lightest-blue: #535975;
-    --dark-blue: #1d1f29;
+    --lighter-blue: rgba(255, 255, 255, .1);
+    --lightest-blue: rgba(255, 255, 255, .2);
+
+    --gradient-one: rgb(29,24,46);
+    --gradient-two: rgb(38,22,46);
+    --gradient-three: rgb(54,22,46);
+    --gradient-four: rgb(75,22,46);
 }
 
 html{
@@ -20,23 +24,6 @@ p {
     margin: 0;
 }
 
-html {
-    --s: 150px; /* control the size*/
-    --c1: var(--lighter-blue);
-    --c2: var(--dark-blue);
-      
-    --c:#0000 75%,var(--c1) 0;
-    --g1:conic-gradient(at calc(200%/3) 10%,var(--c));
-    --g2:conic-gradient(at 10% calc(200%/3),var(--c));
-    background:
-      var(--g1), var(--g2),
-      var(--g1) var(--s) var(--s),
-      var(--g2) var(--s) var(--s),
-      var(--g1) calc(2*var(--s)) calc(2*var(--s)),
-      var(--g2) calc(2*var(--s)) calc(2*var(--s)) var(--c2);
-    background-size: calc(3*var(--s)) calc(3*var(--s));
-  }
-
 body {
     display: flex;
     justify-content: center;
@@ -44,6 +31,21 @@ body {
     font-family: "Lato", Tahoma;
     color: var(--off-white);
     margin: 0;
+    background: linear-gradient(-45deg, var(--gradient-three), var(--gradient-four), var(--gradient-one), var(--gradient-two));
+    background-size: 400% 400%;
+    animation: gradient 60s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 ::-webkit-scrollbar {
@@ -82,7 +84,7 @@ body {
 
 #headshotHolder:hover, #introTextBox > div:hover, .bodySection > h1:hover{
     transform: translate(-2px,-2px);
-    filter: drop-shadow(10px 10px rgba(255, 255, 255, .1));
+    filter: drop-shadow(10px 10px var(--lighter-blue));
     transition: .5s;
 }
 
@@ -123,7 +125,7 @@ body {
 
 #resumeDiv{
     width: 100%;
-    background-color: var(--lighter-blue);
+    background-color: rgba(0, 0, 0, .2);
     display: flex;
     justify-content: center;
 }
@@ -173,7 +175,7 @@ body {
     justify-content: center;
     flex-direction: column;
     border-radius: 20px;
-    background-color: #1d1f29;
+    background-color: var(--lighter-blue);
     margin: 0 0 4em 0;
     box-shadow: 8px 8px 0 var(--lightest-blue);
     transition: .5s;
@@ -225,10 +227,10 @@ body {
 }
 
 h2 {
-    font-size: 26px;
-    margin: 1em 0;
+    font-size: 1.2em;
     font-weight: bold;
     white-space: nowrap;
+    margin: 0;
 }
 
 
@@ -309,20 +311,21 @@ h2 {
 }
 
 .cardTitleBox {
-    font-size: 22px;
+    font-size: 1.4em;
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 1em;
-    overflow-x: auto;
+    gap: .8em 1em;
+    flex-wrap:wrap;
+    margin: 1em 0;
 }
 
 .cardTitleBox > div{
-    border-radius: 22px;
+    border-radius: 1em;
     line-height: 1em;
     background-color: var(--lightest-blue);
-    padding: 11px 22px;
-    height: 22px;
+    padding: .5em 1em;
+    height: 1em;
     overflow:clip;
     white-space: nowrap;
 }
@@ -464,7 +467,12 @@ h1, .projectCard {
         margin-right: auto;
     }
 
+    h2 {
+        font-size: 5.4vmin;
+        width: 100%;
+    }
+
     #introDescription, .cardTextInfo > p{
-        font-size: 5vmin;
+        font-size: 4.8vmin;
     }
 }
