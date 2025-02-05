@@ -34,6 +34,7 @@ body {
     background: linear-gradient(-45deg, var(--gradient-three), var(--gradient-four), var(--gradient-one), var(--gradient-two));
     background-size: 400% 400%;
     animation: gradient 60s ease infinite;
+    overscroll-behavior-x: none;
 }
 
 @keyframes gradient {
