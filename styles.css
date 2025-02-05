@@ -379,6 +379,7 @@ h1, .projectCard {
     height: 80px;
     margin: 0;
     display:inline-block;
+    white-space: nowrap;
 }
 
 #flip div:first-child {
@@ -443,7 +444,7 @@ h1, .projectCard {
     margin: 2em 2em 0 0;
 }
 
-@media screen and (max-width : 440px)
+@media screen and (max-width : 600px)
 {
     #introTitle{
         font-size: 6.5vmin;
