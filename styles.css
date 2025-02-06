@@ -40,7 +40,13 @@ body
     animation: gradient 60s ease infinite;
     overscroll-behavior-x: none;
     align-items: center;
+
+    > *
+    {
+        max-width: var(--content-width);
+    }
 }
+
 
 @keyframes gradient
 {
@@ -84,16 +90,6 @@ body
     background: rgb(255, 255, 255, .5); 
 }
 
-#headshotHolder > img
-{
-    clip-path: circle();
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    margin: 2rem;
-    transition: .5s;
-}
-
 #headshotHolder,
 #introTextBox > div,
 .bodySection > h1
@@ -111,58 +107,10 @@ body
     transition: .5s;
 }
 
-#mainBody {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#introTextBox{
-    align-content: center;
-    padding: 10px 30px;
-    max-width: 700px;
-}
-
-#introTitle{
-    font-size: 60px;
-    font-weight: bold;
-    animation-delay: .75s;
-}
-
-#introDescription{
-    font-size: 20px;
-    line-height: 2rem;
-    animation-delay: 1.5s;
-}
-
-#resumeDiv{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    max-width: var(--content-width);
-    gap: 1em;
-}
-
-#topBox{
-    width: 100%;
-    display: flex;
-    min-height: 54vh;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    flex-wrap: wrap-reverse;
-    flex-direction: row;
-    max-width: calc(1200px + 2rem);
-    margin: 0 auto;
-}
-
 #topBar{
     margin: 0 auto;
     width: 100%;
     height: 5rem;
-    max-width: var(--content-width);
     display: flex;
     justify-content: space-between;
     animation-delay: 2s;
@@ -178,77 +126,162 @@ body
     }
 }
 
-.projectCard {
+#topBox{
+    width: 100%;
     display: flex;
+    min-height: 54vh;
     justify-content: center;
-    flex-direction: column;
-    border-radius: 20px;
-    padding: 1.5em 2em 2em 2em;
-    background-color: var(--ligher-shade);
-    margin: 0 0 4em 0;
-    box-shadow: 8px 8px 0 var(--lighest-shade);
-    transition: .5s;
-    line-height: 2em;
-}
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    max-width: calc(1200px + 2rem);
+    margin: 0 auto;
 
-.projectCard:hover{
-    box-shadow: 10px 10px 0 var(--lighest-shade);
-    transform: translate(-2px,-2px);
-    transition: .5s;
-}
-
-.cardPhoto {
-    max-width: var(--content-width);
-    max-height: auto;
-    width: auto;
-    border-radius: 20px;
-    margin: 0 0 20px 0;
-}
-
-
-.bodySection {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 2em;
-}
-
-.cardTextInfo{
-    font-size: 20px;
-    display:flex;
-    flex-direction: column;
-    gap:1em;
-}
-
-.cardTextInfo > p,
-.cardTitleBox > h2,
-.cardTitleBox > div,
-.projectCard > img
-{
-    transition: .5s;
-}
-
-.cardTextInfo > p:hover,
-.cardTitleBox > h2:hover,
-.cardTitleBox > div:hover,
-.projectCard > img:hover
-{
-    transform: translate(-1px,-1px);
-    transition: .5s;
-}
-
-h2 {
-    font-size: 1.2em;
-    font-weight: bold;
-    white-space: nowrap;
-    margin: 0;
-
-    > p
+    #introTextBox
     {
-        font-size: .7em;
+        align-content: center;
+        padding: 10px 30px;
+        max-width: 700px;
+    
+        #introTitle
+        {
+            font-size: 60px;
+            font-weight: bold;
+            animation-delay: .75s;
+        }
+    
+        #introDescription
+        {
+            font-size: 20px;
+            line-height: 2rem;
+            animation-delay: 1.5s;
+        }
+
+        #locationTitle
+        {
+            display: flex;
+            align-items: center;
+            animation-delay: 1.25s;
+            flex-direction: row;
+            margin: 4px 0 8px;
+            height: 40px;
+
+            #locationText
+            {
+                padding: 0 0 0 10px;
+                font-size: 1.6em;
+                height: 30px;
+            }
+        }
+    }
+
+    > #headshotHolder > img
+    {
+        clip-path: circle();
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        margin: 2rem;
+        transition: .5s;
     }
 }
 
+#resumeDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+
+    .bodySection
+    {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 2em;
+
+        .projectCard
+        {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 20px;
+            padding: 1.5em 2em 2em 2em;
+            gap: 1em;
+            background-color: var(--ligher-shade);
+            margin: 0 0 4em 0;
+            box-shadow: 8px 8px 0 var(--lighest-shade);
+            transition: .5s;
+            line-height: 2em;
+            font-size: 20px;
+
+            .cardTitleBox {
+                font-size: 1.4em;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: .8em 1em;
+                flex-wrap:wrap;
+
+                h2 {
+                    font-size: 1em;
+                    font-weight: bold;
+                    white-space: nowrap;
+                    margin: 0;
+                
+                    > p
+                    {
+                        font-size: .7em;
+                    }
+                }
+            
+                > div {
+                    border-radius: 22px;
+                    font-size: 22px;
+                    line-height: 1em;
+                    background-color: var(--lighest-shade);
+                    padding: .5em 1em;
+                    height: 1em;
+                    overflow:clip;
+                    white-space: nowrap;
+                }
+            }
+
+            .cardPhoto
+            {
+                max-height: auto;
+                width: auto;
+                border-radius: 20px;
+                margin: 0 0 20px 0;
+            }
+
+            .linkButtonBox {
+                font-size: 22px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            
+                gap: 1em;
+            
+                > * {
+                    background-color: var(--ligher-shade);
+                    padding: .5em 1em;
+                    border-radius: 2em;
+                    transition: .25s;
+                    height: 1em;
+                }
+            }
+        }
+
+        .projectCard:hover
+        {
+            box-shadow: 10px 10px 0 var(--lighest-shade);
+            transform: translate(-2px,-2px);
+            transition: .5s;
+        }
+    }
+}
 
 #pageFooter{
     display: flex;
@@ -257,7 +290,6 @@ h2 {
     height: 3em;
     line-height: 3em;
     width: 100%;
-    max-width: var(--content-width);
     flex-direction: row;
     margin: 0 auto;
 
@@ -278,10 +310,25 @@ h2 {
     }
 }
 
-.contactSection
+.projectCard > p,
+.cardTitleBox > h2,
+.cardTitleBox > div,
+.projectCard > img
 {
-    padding-top:1em;
+    transition: .5s;
+}
 
+.projectCard > p:hover,
+.cardTitleBox > h2:hover,
+.cardTitleBox > div:hover,
+.projectCard > img:hover
+{
+    transform: translate(-1px,-1px);
+    transition: .5s;
+}
+
+#contactSection
+{
     > *
     {
         font-size: 22px;
@@ -306,7 +353,7 @@ h2 {
 }
 
 .linkButtonBox > *:hover, 
-.contactSection > *:hover, 
+#contactSection > *:hover, 
 #contactMe:hover 
 {
     box-shadow: 2px 2px 0 var(--off-white);
@@ -316,50 +363,13 @@ h2 {
 }
 
 .linkButtonBox > *:active, 
-.contactSection > *:active, 
+#contactSection > *:active, 
 #contactMe:active 
 {
     box-shadow: 0 0 0 var(--off-white);
     transform: translate(2px,2px);
     background-color: var(--lighest-shade);
     transition: .15s;
-}
-
-.linkButtonBox {
-    font-size: 22px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-top: 1em;
-    gap: 1em;
-
-    > * {
-        background-color: var(--ligher-shade);
-        padding: .5em 1em;
-        border-radius: 2em;
-        transition: .25s;
-        height: 1em;
-    }
-}
-
-.cardTitleBox {
-    font-size: 1.4em;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: .8em 1em;
-    flex-wrap:wrap;
-    margin-bottom: 1em;
-
-    > div {
-        border-radius: 1em;
-        line-height: 1em;
-        background-color: var(--lighest-shade);
-        padding: .5em 1em;
-        height: 1em;
-        overflow:clip;
-        white-space: nowrap;
-    }
 }
 
 .animate,
@@ -465,23 +475,6 @@ h1,
     position:relative;
 }
 
-.locationTitle
-{
-    display: flex;
-    align-items: center;
-    animation-delay: 1.25s;
-    flex-direction: row;
-    margin: 4px 0 8px;
-    height: 40px;
-}
-
-.locationText
-{
-    padding: 0 0 0 10px;
-    font-size: 1.6em;
-    height: 30px;
-}
-
 @media screen and (max-width : 600px)
 {
     #introTitle
@@ -512,7 +505,7 @@ h1,
         width: 100%;
     }
 
-    #introDescription, .cardTextInfo > p
+    #introDescription, .projectCard > p
     {
         font-size: 4.8vmin;
     }
