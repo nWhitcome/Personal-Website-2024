@@ -206,14 +206,14 @@ body
             display: flex;
             justify-content: center;
             flex-direction: column;
-            border-radius: 20px;
-            padding: 1.5em 2em 2em 2em;
+            border-radius: 22px;
+            padding: 24px 32px 32px 32px;
             gap: 1em;
             background-color: var(--ligher-shade);
             margin: 0 0 4em 0;
             box-shadow: 8px 8px 0 var(--lighest-shade);
             transition: .5s;
-            line-height: 2em;
+            line-height: 32px;
             font-size: 20px;
 
             .cardTitleBox {
@@ -252,8 +252,7 @@ body
             {
                 max-height: auto;
                 width: auto;
-                border-radius: 20px;
-                margin: 0 0 20px 0;
+                border-radius: 22px;
             }
 
             .linkButtonBox {
@@ -335,7 +334,7 @@ body
         display: flex;
         align-items: center;
         padding: .5em;
-        border-radius: 20px;
+        border-radius: 22px;
         height: 50px;
         transition: .25s;
     }
