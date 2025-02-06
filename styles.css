@@ -1,8 +1,8 @@
 :root {
     --content-width: calc(1500px + 2rem);
     --off-white: #d9d7d7;
-    --lighter-blue: rgba(255, 255, 255, .1);
-    --lightest-blue: rgba(255, 255, 255, .2);
+    --ligher-shade: rgba(255, 255, 255, .1);
+    --lighest-shade: rgba(255, 255, 255, .2);
 
     --gradient-one: rgb(29,24,46);
     --gradient-two: rgb(38,22,46);
@@ -10,21 +10,25 @@
     --gradient-four: rgb(75,22,46);
 }
 
-html{
+html
+{
     scroll-behavior: smooth;
 }
 
-a{
+a
+{
     color: var(--off-white);
     line-height: 1em;
     text-decoration: none;
 }
 
-p {
+p
+{
     margin: 0;
 }
 
-body {
+body
+{
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -35,41 +39,53 @@ body {
     background-size: 400% 400%;
     animation: gradient 60s ease infinite;
     overscroll-behavior-x: none;
+    align-items: center;
 }
 
-@keyframes gradient {
-    0% {
+@keyframes gradient
+{
+    0%
+    {
         background-position: 0% 50%;
     }
-    50% {
+
+    50%
+    {
         background-position: 100% 50%;
     }
-    100% {
+
+    100%
+    {
         background-position: 0% 50%;
     }
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar
+{
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0); 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: var(--lightest-blue); 
-    border-radius: 5px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--off-white); 
-  }
+}
 
-#headshotHolder > img {
+/* Track */
+::-webkit-scrollbar-track
+{
+    background: var(--gradient-one); 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb
+{
+    background: rgb(255, 255, 255, .2); 
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover
+{
+    background: rgb(255, 255, 255, .5); 
+}
+
+#headshotHolder > img
+{
     clip-path: circle();
     width: 300px;
     height: 300px;
@@ -78,18 +94,25 @@ body {
     transition: .5s;
 }
 
-#headshotHolder, #introTextBox > div, .bodySection > h1{
+#headshotHolder,
+#introTextBox > div,
+.bodySection > h1
+{
     transition: .5s;
     filter: drop-shadow(8px 8px rgba(255, 255, 255, .05));
 }
 
-#headshotHolder:hover, #introTextBox > div:hover, .bodySection > h1:hover{
+#headshotHolder:hover,
+#introTextBox > div:hover,
+.bodySection > h1:hover
+{
     transform: translate(-2px,-2px);
-    filter: drop-shadow(10px 10px var(--lighter-blue));
+    filter: drop-shadow(10px 10px var(--ligher-shade));
     transition: .5s;
 }
 
 #mainBody {
+    width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -99,17 +122,6 @@ body {
     align-content: center;
     padding: 10px 30px;
     max-width: 700px;
-}
-
-#introDiv{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap-reverse;
-    flex-direction: row;
-    max-width: calc(1200px + 2rem);
-    padding: 1rem;
 }
 
 #introTitle{
@@ -126,9 +138,11 @@ body {
 
 #resumeDiv{
     width: 100%;
-    background-color: rgba(0, 0, 0, .2);
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    max-width: var(--content-width);
+    gap: 1em;
 }
 
 #topBox{
@@ -137,38 +151,31 @@ body {
     min-height: 54vh;
     justify-content: center;
     align-items: center;
-    padding: 0 0 5rem 0;
-}
-
-#textBody{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: var(--content-width);
-    width: 100%;
-    gap: 1em;
+    align-content: center;
+    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    max-width: calc(1200px + 2rem);
+    margin: 0 auto;
 }
 
 #topBar{
+    margin: 0 auto;
     width: 100%;
     height: 5rem;
-    display: flex;
-    justify-content: center;
-    animation-delay: 2s;
-}
-
-.barItem{
-    height: 2em;
-    line-height: 2em;
-    padding: 0 1em;
-    margin: 2em 0 0 2em;
-}
-
-#tb2{
-    width: 100%;
-    max-width: calc(1500px + 2rem);
+    max-width: var(--content-width);
     display: flex;
     justify-content: space-between;
+    animation-delay: 2s;
+
+    > *
+    {
+        height: 2em;
+        line-height: 2em;
+        padding: 0 1em;
+        margin: 2em;
+        transition: .25s;
+        border-radius: 2em;
+    }
 }
 
 .projectCard {
@@ -176,14 +183,16 @@ body {
     justify-content: center;
     flex-direction: column;
     border-radius: 20px;
-    background-color: var(--lighter-blue);
+    padding: 1.5em 2em 2em 2em;
+    background-color: var(--ligher-shade);
     margin: 0 0 4em 0;
-    box-shadow: 8px 8px 0 var(--lightest-blue);
+    box-shadow: 8px 8px 0 var(--lighest-shade);
     transition: .5s;
+    line-height: 2em;
 }
 
 .projectCard:hover{
-    box-shadow: 10px 10px 0 var(--lightest-blue);
+    box-shadow: 10px 10px 0 var(--lighest-shade);
     transform: translate(-2px,-2px);
     transition: .5s;
 }
@@ -196,13 +205,6 @@ body {
     margin: 0 0 20px 0;
 }
 
-.cardText {
-    padding: 0 2em 2em 2em;
-    line-height: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 .bodySection {
     display: flex;
@@ -218,11 +220,19 @@ body {
     gap:1em;
 }
 
-.cardTextInfo > p, .cardTitleBox > h2, .cardTitleBox > div, .cardText > img{
+.cardTextInfo > p,
+.cardTitleBox > h2,
+.cardTitleBox > div,
+.projectCard > img
+{
     transition: .5s;
 }
 
-.cardTextInfo > p:hover, .cardTitleBox > h2:hover, .cardTitleBox > div:hover, .cardText > img:hover{
+.cardTextInfo > p:hover,
+.cardTitleBox > h2:hover,
+.cardTitleBox > div:hover,
+.projectCard > img:hover
+{
     transform: translate(-1px,-1px);
     transition: .5s;
 }
@@ -232,73 +242,86 @@ h2 {
     font-weight: bold;
     white-space: nowrap;
     margin: 0;
+
+    > p
+    {
+        font-size: .7em;
+    }
 }
 
 
 #pageFooter{
     display: flex;
-    justify-content: center;
-    padding: .5em 0;
-}
-
-#footerCenter{
-    display: flex;
     justify-content: space-between;
+    padding: .5em 0;
     height: 3em;
     line-height: 3em;
     width: 100%;
     max-width: var(--content-width);
     flex-direction: row;
+    margin: 0 auto;
+
+    > *
+    {
+        padding: 0 2em;
+    }
+
+    > a
+    {
+        display:flex;
+        align-items: center;
+    }
+
+    & img{
+        height: 2em;
+        padding: 0 .5em;
+    }
 }
 
-.bottomRightIcons{
-    height: 2em;
-    padding: 0 .5em;
+.contactSection
+{
+    padding-top:1em;
+
+    > *
+    {
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        padding: .5em;
+        border-radius: 20px;
+        height: 50px;
+        transition: .25s;
+    }
+    
+    > a > *
+    {
+        font-size: 36px;
+        padding: 5px 15px 5px 5px;
+    }
+
+    & img{
+        width: auto;
+        height: 30px;
+    }
 }
 
-#footerIconHolder {
-    display:flex;
-    align-items: center;
-}
-
-.contact-icon{
-    font-size: 36px;
-    padding: 5px 15px 5px 5px;
-}
-
-.contact-selection{
-    font-size: 22px;
-    display: flex;
-    align-items: center;
-    padding: .5em;
-    border-radius: 20px;
-    height: 50px;
-    transition: .25s;
-}
-
-.fullPadding{
-    padding: 2em;
-}
-
-.linkButton {
-    background-color: var(--lighter-blue);
-    padding: .5em 1em;
-    border-radius: 22px;
-    transition: .25s;
-    height: 1em;
-}
-
-.linkButton:hover, .contact-selection:hover, #contactMe:hover {
+.linkButtonBox > *:hover, 
+.contactSection > *:hover, 
+#contactMe:hover 
+{
     box-shadow: 2px 2px 0 var(--off-white);
     transform: translate(-2px,-2px);
-    background-color: var(--lightest-blue);
+    background-color: var(--lighest-shade);
     transition: .15s;
 }
 
-.linkButton:active, .contact-selection:active, #contactMe:active {
+.linkButtonBox > *:active, 
+.contactSection > *:active, 
+#contactMe:active 
+{
     box-shadow: 0 0 0 var(--off-white);
     transform: translate(2px,2px);
-    background-color: var(--lightest-blue);
+    background-color: var(--lighest-shade);
     transition: .15s;
 }
 
@@ -309,6 +332,14 @@ h2 {
     flex-wrap: wrap;
     padding-top: 1em;
     gap: 1em;
+
+    > * {
+        background-color: var(--ligher-shade);
+        padding: .5em 1em;
+        border-radius: 2em;
+        transition: .25s;
+        height: 1em;
+    }
 }
 
 .cardTitleBox {
@@ -318,30 +349,23 @@ h2 {
     align-items: center;
     gap: .8em 1em;
     flex-wrap:wrap;
-    margin: 1em 0;
+    margin-bottom: 1em;
+
+    > div {
+        border-radius: 1em;
+        line-height: 1em;
+        background-color: var(--lighest-shade);
+        padding: .5em 1em;
+        height: 1em;
+        overflow:clip;
+        white-space: nowrap;
+    }
 }
 
-.cardTitleBox > div{
-    border-radius: 1em;
-    line-height: 1em;
-    background-color: var(--lightest-blue);
-    padding: .5em 1em;
-    height: 1em;
-    overflow:clip;
-    white-space: nowrap;
-}
-
-.progProject{
-    display: flex;
-    gap: 1em;
-    flex-direction: column;
-}
-
-.subHeading {
-    font-size: 20px;
-}
-
-.animate, .projectCard, h1 {
+.animate,
+.projectCard,
+h1
+{
     animation-duration: 1s;
     animation-delay: 0.5s;
     animation-name: animate-fade;
@@ -349,50 +373,61 @@ h2 {
     animation-fill-mode: backwards;
 }
 
-/* Pop In */
-.animate.pop, .projectCard, h1{
+.animate.pop,
+.projectCard,
+h1
+{
     animation-name: animate-pop;
 }
 
-h1, .projectCard {
+h1,
+.projectCard
+{
     animation-delay: 2s;
 }
 
-@keyframes animate-pop {
-    0% {
+@keyframes animate-pop
+{
+    0%
+    {
         opacity: 0;
         transform: scale(0.95, 0.95);
         transform: translate(0,20px);
     }
-    100% {
+    100%
+    {
         opacity: 1;
         transform: scale(1, 1);
         transform: translate(0,0);
     }
 }
 
-#flip {
+#flip
+{
     margin: 4px 0;
     height:80px;
     overflow:hidden;
     animation-delay: 1s;
     width: 100%;
+
+    > div > div 
+    {
+        height: 80px;
+        margin: 0;
+        display:inline-block;
+        white-space: nowrap;
+    }
+
+    div:first-child
+    {
+        animation: show 12s ease-out infinite;
+        animation-delay: 5s;
+    }
 }
 
-#flip > div > div {
-    height: 80px;
-    margin: 0;
-    display:inline-block;
-    white-space: nowrap;
-}
 
-#flip div:first-child {
-    animation: show 12s ease-out infinite;
-    animation-delay: 5s;
-}
-
-
-@keyframes show {
+@keyframes show
+{
     0% {margin-top:-240px;}
     10% {margin-top:-160px;}
     25% {margin-top:-160px;}
@@ -403,20 +438,23 @@ h1, .projectCard {
     100% {margin-top:-240px;}
 }
 
-.pin{
+.pin
+{
     padding: 14px 0 0 0;
     height: 30px;
+
+    > div
+    {
+        width: 4px;
+        height: 4px;
+        border: 5px solid var(--off-white);
+        border-radius: 50%;
+        position:relative;
+    }
 }
 
-.pin > div {
-    width: 4px;
-    height: 4px;
-    border: 5px solid var(--off-white);
-    border-radius: 50%;
-    position:relative;
-}
-
-.pin > div::after {
+.pin > div::after
+{
     content: '';
     width: 0px;
     height: 0px;
@@ -427,7 +465,8 @@ h1, .projectCard {
     position:relative;
 }
 
-.locationTitle{
+.locationTitle
+{
     display: flex;
     align-items: center;
     animation-delay: 1.25s;
@@ -436,44 +475,45 @@ h1, .projectCard {
     height: 40px;
 }
 
-.locationText{
+.locationText
+{
     padding: 0 0 0 10px;
-    font-size: 24px;
+    font-size: 1.6em;
     height: 30px;
-}
-
-#contactMe {
-    transition: .25s;
-    border-radius: 22px;
-    margin: 2em 2em 0 0;
 }
 
 @media screen and (max-width : 600px)
 {
-    #introTitle{
+    #introTitle
+    {
         font-size: 6.5vmin;
     }
 
-    #flip{
+    #flip
+    {
         height: 8vmin;
     }
 
-    .bodySection{
+    .bodySection
+    {
         padding: 0;
     }
 
-    h1 {
+    h1
+    {
         font-size: 7vmin;
         margin-left: auto;
         margin-right: auto;
     }
 
-    h2 {
+    h2
+    {
         font-size: 5.4vmin;
         width: 100%;
     }
 
-    #introDescription, .cardTextInfo > p{
+    #introDescription, .cardTextInfo > p
+    {
         font-size: 4.8vmin;
     }
 }
