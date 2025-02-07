@@ -22,7 +22,8 @@ a
     text-decoration: none;
 }
 
-p
+p,
+h1
 {
     margin: 0;
 }
@@ -108,9 +109,7 @@ body
 }
 
 #topBar{
-    margin: 0 auto;
     width: 100%;
-    height: 5rem;
     display: flex;
     justify-content: space-between;
     animation-delay: 2s;
@@ -120,23 +119,23 @@ body
         height: 2em;
         line-height: 2em;
         padding: 0 1em;
-        margin: 2em;
         transition: .25s;
         border-radius: 2em;
+        margin: 2rem 1rem 0 1rem;
     }
 }
 
 #topBox{
     width: 100%;
     display: flex;
-    min-height: 54vh;
+    min-height: 54svh;
     justify-content: center;
     align-items: center;
     align-content: center;
     flex-wrap: wrap-reverse;
     flex-direction: row;
     max-width: calc(1200px + 2rem);
-    margin: 0 auto;
+    margin: 1rem auto;
 
     #introTextBox
     {
@@ -200,6 +199,8 @@ body
         justify-content: center;
         flex-direction: column;
         padding: 0 2em;
+        margin: 0 0 2em 0;
+        gap: 2em;
 
         .projectCard
         {
@@ -210,7 +211,6 @@ body
             padding: 24px 32px 32px 32px;
             gap: 1em;
             background-color: var(--ligher-shade);
-            margin: 0 0 4em 0;
             box-shadow: 8px 8px 0 var(--lighest-shade);
             transition: .5s;
             line-height: 32px;
@@ -237,7 +237,7 @@ body
                 }
             
                 > div {
-                    border-radius: 22px;
+                    border-radius: 2em;
                     font-size: 22px;
                     line-height: 1em;
                     background-color: var(--lighest-shade);
@@ -294,7 +294,7 @@ body
 
     > *
     {
-        padding: 0 2em;
+        padding: 0 2rem;
     }
 
     > a
@@ -476,7 +476,7 @@ h1,
 
 @media screen and (max-width : 600px)
 {
-    #introTitle
+    #topBox> #introTextBox > #introTitle
     {
         font-size: 6.5vmin;
     }
@@ -486,26 +486,38 @@ h1,
         height: 8vmin;
     }
 
-    .bodySection
+    #resumeDiv > .bodySection
     {
         padding: 0;
-    }
 
-    h1
-    {
-        font-size: 7vmin;
-        margin-left: auto;
-        margin-right: auto;
-    }
+        h1
+        {
+            font-size: 7vmin;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    h2
-    {
-        font-size: 5.4vmin;
-        width: 100%;
-    }
+        .projectCard{
+            p
+            {
+                font-size: 4.6vmin;
+            }
 
-    #introDescription, .projectCard > p
-    {
-        font-size: 4.8vmin;
+            .cardTitleBox
+            {
+                gap: .5em;
+
+                > h2
+                {
+                    font-size: 5.4vmin;
+                    width: 100%;
+                }
+
+                > div
+                {
+                    font-size: 4.6vmin;
+                }
+            }
+        }
     }
 }
